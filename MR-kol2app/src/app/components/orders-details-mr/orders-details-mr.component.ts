@@ -13,9 +13,9 @@ export class OrdersDetailsMRComponent implements OnInit {
   constructor(private route: ActivatedRoute, private dataService: MRDataService) { }
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe(params => {
+    this.route.params.subscribe(params => {
       console.log('params', params);
-      this.dataService.getPost(params.get('id')).subscribe((post) => {
+      this.dataService.getPost(params.id).subscribe((post) => {
         this.post = post;
 
       });

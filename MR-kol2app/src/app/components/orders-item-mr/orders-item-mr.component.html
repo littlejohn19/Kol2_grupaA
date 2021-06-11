@@ -7,6 +7,6 @@
       <small class="text-muted">{{ post.price }}</small>
     </p>
 
-    <a href="#" class="btn btn-primary" [routerLink]="['order/', post.id]" >View</a>
+    <a href="#" class="btn btn-primary" routerLink="'order/'+ {{post.id}}" >View</a>
   </div>
 </div>
